@@ -1,10 +1,11 @@
 package com.brexson.learnspringaop.aop.data;
 
+import com.brexson.learnspringaop.aop.annotations.TrackTime;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class DataService2 {
-
+    @TrackTime
     public int[] retrieveData() {
         try {
             Thread.sleep(30);

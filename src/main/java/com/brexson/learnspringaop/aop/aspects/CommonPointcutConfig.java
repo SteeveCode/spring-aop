@@ -1,5 +1,6 @@
 package com.brexson.learnspringaop.aop.aspects;
 
+import com.brexson.learnspringaop.aop.annotations.TrackTime;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.context.annotation.Configuration;
@@ -15,4 +16,7 @@ public class CommonPointcutConfig {
     public void dataPackageConfig(){}
     @Pointcut("bean(*Service*)")
     public void allPackageConfigUsingBean(){}
+    @Pointcut("@annotation(com.brexson.learnspringaop.aop.annotations.TrackTime)")
+    public void trackTimeAnnotation(){}
+
 }

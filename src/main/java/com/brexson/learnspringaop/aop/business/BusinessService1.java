@@ -1,6 +1,7 @@
 package com.brexson.learnspringaop.aop.business;
 
 
+import com.brexson.learnspringaop.aop.annotations.TrackTime;
 import com.brexson.learnspringaop.aop.data.DataService1;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class BusinessService1 {
         this.dataService1 = dataService1;
     }
 
+    @TrackTime
     public int calculateMax() {
         int[] data = dataService1.retrieveData();
 //        throw new RuntimeException("Something went wrong");
